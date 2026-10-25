@@ -15,11 +15,15 @@ Claude Code 的头脑风暴 skill，调用名 `/wow`。用户只给一句很短�
 
 ## 安装
 
+用 [skills](https://github.com/vercel-labs/skills) 命令行工具（需要 Node.js 18+）：
+
 ```bash
-ln -s /Volumes/S690/codes/wow-skill/skills/wow ~/.claude/skills/wow
+npx skills add lijunyu726/wow-skill -g -a claude-code
 ```
 
-新开 Claude Code 会话后输入 `/wow` 调用。description 里不列触发词，主要靠手动调用。
+`-g` 装到用户目录 `~/.claude/skills/wow/`，所有项目都能用；去掉 `-g` 则只装进当前项目。
+
+新开 Claude Code 会话后输入 `/wow`，后面跟一句话。description 里不列触发词，主要靠手动调用。
 
 ## 边界
 
