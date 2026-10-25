@@ -19,7 +19,7 @@ Claude Code 的头脑风暴 skill，调用名 `/wow`。用户只给一句很短�
 ln -s /Volumes/S690/codes/wow-skill/skills/wow ~/.claude/skills/wow
 ```
 
-新开 Claude Code 会话后输入 `/wow`，或直接说「头脑风暴」「全力以赴」「大胆做」等触发。
+新开 Claude Code 会话后输入 `/wow` 调用。description 里不列触发词，主要靠手动调用。
 
 ## 边界
 
