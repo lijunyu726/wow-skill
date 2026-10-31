@@ -18,13 +18,19 @@ Claude Code 的头脑风暴 skill，调用名 `/wow`。用户只给一句很短�
 
 用 [skills](https://github.com/vercel-labs/skills) 命令行工具（需要 Node.js 18+）：
 
+仓库里有两个 skill，分开安装：
+
 ```bash
-npx skills add lijunyu726/wow-skill -g -a claude-code
+# wow：问一轮、发散押注、做成成品并评审
+npx skills add lijunyu726/wow-skill -s wow -g -a claude-code
+
+# wow-lite：只发散，出 3–5 张方案卡片让你选
+npx skills add lijunyu726/wow-skill -s wow-lite -g -a claude-code
 ```
 
-`-g` 装到用户目录 `~/.claude/skills/wow/`，所有项目都能用；去掉 `-g` 则只装进当前项目。
+`-s` 指定装哪一个，两个都要就各跑一次；不加 `-s` 时会让你在列表里勾选。`-g` 装到用户目录 `~/.claude/skills/<名字>/`，所有项目都能用；去掉 `-g` 则只装进当前项目。
 
-新开 Claude Code 会话后输入 `/wow` 或 `/wow-lite`，后面跟一句话。默认两个都装；只装一个时加 `--skill wow` 或 `--skill wow-lite`。description 里不列触发词，主要靠手动调用。
+新开 Claude Code 会话后输入 `/wow` 或 `/wow-lite`，后面跟一句话。description 里不列触发词，主要靠手动调用。
 
 ## 边界
 
