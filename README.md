@@ -6,6 +6,7 @@ Claude Code 的头脑风暴 skill，调用名 `/wow`。用户只给一句很短�
 
 - `skills/wow/SKILL.md`：skill 本体，六步流程：先问一轮再自己拍板、认出默认、发散押注、做到位、评审员看过再交、收反馈
 - `skills/wow/references/defaults.md`：常见默认样本，只给评审员子代理用来识别残留的套路
+- `skills/wow-lite/SKILL.md`：轻装版 `/wow-lite`，只做发散：想出 3–5 个核心想法不同的方案，写成文字卡片（名字、一句话、关键画面）并给出推荐，由用户来选；不问需求、不做成品、不开评审，适合想先看思路、省时间和额度的时候
 - `docs/prompts.md`：Opus 5.5「一句话惊艳」案例的提示词写法总结（2026-10-24 整理）
 - `docs/sources/`：每个来源的资料卡（概括、提示词结构、可复用做法、可信度提醒），防止原链接失效
   - `cn-official.md`：国内 6 个来源和 Anthropic 官方 3 份文档
@@ -23,7 +24,7 @@ npx skills add lijunyu726/wow-skill -g -a claude-code
 
 `-g` 装到用户目录 `~/.claude/skills/wow/`，所有项目都能用；去掉 `-g` 则只装进当前项目。
 
-新开 Claude Code 会话后输入 `/wow`，后面跟一句话。description 里不列触发词，主要靠手动调用。
+新开 Claude Code 会话后输入 `/wow` 或 `/wow-lite`，后面跟一句话。默认两个都装；只装一个时加 `--skill wow` 或 `--skill wow-lite`。description 里不列触发词，主要靠手动调用。
 
 ## 边界
 
